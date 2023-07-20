@@ -30,6 +30,8 @@ public class LandingPage {
 
 
 
+
+
     //This method is used in all Scenarios to check whether on the right page
     public LandingPage(WebDriver driver) {this.driver = driver;}
     @Step
@@ -96,4 +98,6 @@ public class LandingPage {
     public void clickOnYourLists(){
         driver.findElement(yourLists).click();
     }
+
+    public boolean isSignInVisible(){return driver.findElement(emailField).isDisplayed();}
 }

@@ -33,6 +33,7 @@ public class ProductPage {
     public ProductPage(WebDriver driver) {
         this.driver = driver;
     }
+    @Step
     public void changeQuantity(){
         Select quanDropDown= new Select(driver.findElement(quantityDD));
         quanDropDown.selectByVisibleText("2");
@@ -61,6 +62,7 @@ public class ProductPage {
     }
 
 
+    @Step
     public void clickOnProceedToCart(){
         driver.findElement(continueToCart).click();
     }

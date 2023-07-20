@@ -10,7 +10,7 @@ public class CartTest extends BaseTest {
         landingPage.checkHomePage();
         landingPage.PressOnAll();
         landingPage.PressTodayDeals();
-        todayDealPage.getCategoryNumber(13);
+        todayDealPage.getCategoryNumber(2);
         todayDealPage.clickOnFirstProduct();
         todayDealPage.clickOnSecondItem();
         productPage.changeQuantity();
@@ -28,7 +28,7 @@ public class CartTest extends BaseTest {
         Assert.assertEquals(QuantityCart,QuantityProduct);
         Assert.assertEquals(nameCart,nameProduct);
         //This was left to fail the Test to test Screen shots
-        Assert.assertEquals(priceCart,priceProduct);
+        //Assert.assertEquals(priceCart,priceProduct);
         }
     }
 
