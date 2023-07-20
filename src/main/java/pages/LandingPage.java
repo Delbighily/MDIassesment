@@ -26,6 +26,10 @@ public class LandingPage {
     private By yourOrders =By.id("nav_prefetch_yourorders");
     private By yourAddress=By.id("nav_prefetch_youraddresses");
     private By yourLists=By.xpath("//*[@id=\"nav-al-your-account\"]/a[4]");
+    private By images=By.className("al-intro-benefit-icon");
+    private By signInBtn=By.className("a-button-inner");
+
+
 
 
 
@@ -96,4 +100,8 @@ public class LandingPage {
     public void clickOnYourLists(){
         driver.findElement(yourLists).click();
     }
+
+    public boolean isSignInVisible(){return driver.findElement(emailField).isDisplayed();}
+    public boolean isImagesVisible(){return driver.findElement(images).isDisplayed();}
+    public boolean isSignInBtnVisible(){return driver.findElement(signInBtn).isDisplayed();}
 }
